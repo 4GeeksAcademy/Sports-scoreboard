@@ -1,0 +1,76 @@
+* {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: #224987;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+#app {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+}
+
+#score-board {
+    display: flex;
+    flex-direction: column !important;
+    /* justify-content: center !important; */
+    align-items: start !important;
+    min-height: 25vh;
+    height: 100%;
+    width: 75%;
+    flex-grow: inherit;
+    padding: 0 2rem;
+    background-color: rgb(54, 71, 199);
+    border: 5px solid white;
+}
+
+.timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+h1 {
+    margin: 0 auto;
+    padding: 5px;
+    border: 5px solid white;
+    color: red;
+    background-color: black;
+}
+
+.score > div > p {
+    color: white;
+}
+
+.score > div > h1{
+    color: orange;
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
