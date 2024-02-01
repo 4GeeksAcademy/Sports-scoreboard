@@ -1,24 +1,35 @@
 
 window.onload = () => {
+
+    const configScoreBoardforTeam = (teamName) => {
+
+        /* Valores de Seleccionar o Crear elementos  */
+
+        let teamControls = document.querySelectorAll(`.${teamName}-controls > button`)
+
+        let teamCounterH1 = document.getElementById(`${teamName}-h1`)
+
+
+         /* Modificas elementos  */
+
+        teamControls.forEach( button => {
     
-    console.log("Hola from main.js")
+            button.addEventListener('click', () => {
 
-    let guestControls = document.querySelectorAll(".guest-controls > button")
+                let counter = parseInt( teamCounterH1.innerText )
 
-    console.log(guestControls)
+                counter = counter + parseInt(button.innerText)
 
-    let guestCounter = document.querySelector(".visitante")
-
-    let guestCounterH1 = guestCounter.lastChild.previousElementSibling
-
-    guestControls.forEach( btn => {
-
-        btn.addEventListener('click', () => {
-            let counter = parseInt(guestCounterH1.innerText)
-            counter += parseInt(btn.innerText)
-            console.log(counter)
-            guestCounterH1.innerText = counter
+                teamCounterH1.innerText = counter
+            })
         })
-    })
+
+        // devolver cosas
+
+    } 
+
+    configScoreBoardforTeam("home")
+    
+    configScoreBoardforTeam("guest")
 
 }
